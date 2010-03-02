@@ -6,16 +6,17 @@
 //  Copyright 2010 Daniel Ricciotti. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "Constants.h"
+#import "DRModelConstants.h"
 
 @interface DRGetJSONOperation : NSOperation {
 	NSURL *objectURL;
-	NSObject *bundle;
-	UIViewController *mainViewController;
+	UIViewController *target;
 	SEL callback;
+	NSMutableDictionary *userInfo;
 }
+@property (nonatomic, retain) NSMutableDictionary *userInfo;
 @property (nonatomic, retain) NSURL *objectURL;
-@property (nonatomic, copy) NSObject *bundle;
-- (id)initWithViewController:(UIViewController *)viewController andBundle:(NSObject*)userBundle;
-- (void) setCallback:(SEL)select;
+
+- (id)init;
+- (void) setCallback:(SEL)select andTarget:(UIViewController*)callbackTarget;
 @end

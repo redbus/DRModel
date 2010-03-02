@@ -6,17 +6,17 @@
 //  Copyright 2010 Daniel Ricciotti. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "Constants.h"
+#import "DRModelConstants.h"
 
 @interface DRGetImageOperation : NSOperation {
 	NSURL *objectURL;
-	NSNumber *index;
-	NSNumber *objectIdentifier;
-	UIViewController *mainViewController;
+	UIViewController *target;
 	SEL callback;
+	NSMutableDictionary *userInfo;
 }
+@property (nonatomic, retain) NSMutableDictionary *userInfo;
 @property (nonatomic, retain) NSURL *objectURL;
-@property (nonatomic, retain) NSNumber *objectIdentifier;
-- (id)initWithViewController:(UIViewController *)viewController andIndex:(int)number;
-- (void) setCallback:(SEL)select;
+
+- (id)init;
+- (void) setCallback:(SEL)select andTarget:(UIViewController*)callbackTarget;
 @end

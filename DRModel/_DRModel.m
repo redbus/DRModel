@@ -1,5 +1,3 @@
-#define LOGS TRUE
-#import "Log.h"
 //
 //  _DRModel.m
 //

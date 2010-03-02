@@ -1,10 +1,9 @@
 #import "_DRModel.h"
-#import "Constants.h"
 
 @interface DRModel : _DRModel {}
 + (DRModel *)sharedDRModel;
 
 // Custom Methods Go Here
-- (void) getVideoList:(cacheOption)shouldCache andTarget:(UIViewController*)target andCallback:(SEL)selector;
-
+- (void) getImageWithURL:(NSURL*)imageURL andUserInfo:(NSMutableDictionary*)userInfo andTarget:(UIViewController*)target andCallback:(SEL)selector;
+- (void) getJSONWithURL:(NSURL*)jsonURL andUserInfo:(NSMutableDictionary*)userInfo andTarget:(UIViewController*)target andCallback:(SEL)selector;
 @end

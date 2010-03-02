@@ -1,4 +1,11 @@
 # README
+#
 # DRModel : A Data Retrieval for Cocoa
+# By Danny Ricciotti
+#
 
-More Coming Soon...
+# Sample Usage
+See the TestProject code for an example of how to use the DRModel class. There are two custom data object getters written in DRModel.m already
+
+The DRModel Class is uses SynthesizeSingleton.h to create a shared object. The object is available like this:
+[[DRModel sharedDRModel] __your custom object getter__];

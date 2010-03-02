@@ -1,5 +1,3 @@
-#define LOGS FALSE
-#import "Log.h"
 //
 //  DRGetCategoryOperation.m
 //  sciphone
@@ -12,52 +10,49 @@
 
 @implementation DRGetJSONOperation
 @synthesize objectURL;
-@synthesize bundle;
+@synthesize userInfo;
 
-- (id)initWithViewController:(UIViewController *)viewController andBundle:(NSObject*)userBundle {
+- (id)init {
     if (self = [super init]) {
 		objectURL = nil;
-		mainViewController = [viewController retain];
-		bundle = [userBundle copy];
+		callback = nil;
+		target = nil;
+		userInfo = nil;
     }
     return self;
 }
-- (void) setCallback:(SEL)select {
+- (void) setCallback:(SEL)select andTarget:(UIViewController*)callbackTarget {
 	callback = select;
+	target = callbackTarget;
 }
 - (void)dealloc {
-	[objectURL release];
-	[mainViewController release];
     [super dealloc];
 }
+
 - (void)main {
-	PrintCalled;
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	NSData *data = nil;
 	NSHTTPURLResponse *response = NULL;
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:objectURL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:kDataTimeout];
-	NSLog(@"URL = %@", objectURL);
-	
 	NSError *error = nil;
 	data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSLog(@"Request finished. Error = %@",[error localizedDescription]);
-    if (error == nil) {
-	//if (FALSE) {
+	NSMutableDictionary *infoBundle = [[NSMutableDictionary alloc] initWithDictionary:userInfo];
+	if (error == nil) {
 		NSString *jsonData = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
-		NSLog(@"JSON data = %@", jsonData);
 		NSDictionary *jsonDict = [jsonData JSONValue];
-		NSLog(@"JSON DICT = %@", jsonDict);
 		[jsonData release];
-		[mainViewController performSelectorOnMainThread:callback
-											 withObject:[NSArray arrayWithObjects:jsonDict, bundle, nil] 
+		[infoBundle setObject:jsonDict forKey:@"jsonDict"];
+		[target performSelectorOnMainThread:callback
+											 withObject:infoBundle 
 										  waitUntilDone:YES];
 		[pool release];
 		return;
 	}
-	NSLog(@"Error Did Happen. Sending Nil Array");
-	[mainViewController performSelectorOnMainThread:callback
-										 withObject:[NSArray arrayWithObjects:nil] 
+	[infoBundle setObject:error forKey:@"error"];
+	[target performSelectorOnMainThread:callback
+										 withObject:infoBundle
 									  waitUntilDone:YES];
+	[infoBundle release];
 	[pool release];
 }
 
