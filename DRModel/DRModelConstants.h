@@ -6,6 +6,10 @@
  *
  */
 
+typedef uint32_t objectID;
+typedef uint32_t queueID;
+typedef uint32_t poolID;
+
 // Load Image Timeout (in seconds)
 // Specify the timeout period for loading any images from DRModel
 #define kImageTimeout 20.0f
@@ -45,7 +49,3 @@ typedef enum cacheOption {
 	cacheOptionWrite,
 	cacheOptionReadAndWrite
 } cacheOption;
-
-typedef uint32_t objectID;
-typedef uint32_t queueID;
-typedef uint32_t poolID;

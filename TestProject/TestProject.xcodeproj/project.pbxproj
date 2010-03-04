@@ -10,7 +10,6 @@
 		111ECA04113CA572001F9C71 /* _DRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 111EC9FA113CA572001F9C71 /* _DRModel.m */; };
 		111ECA05113CA572001F9C71 /* DRGetImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 111EC9FC113CA572001F9C71 /* DRGetImageOperation.m */; };
 		111ECA06113CA572001F9C71 /* DRGetJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 111EC9FE113CA572001F9C71 /* DRGetJSONOperation.m */; };
-		111ECA07113CA572001F9C71 /* DRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ECA00113CA572001F9C71 /* DRModel.m */; };
 		111ECA16113CA596001F9C71 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ECA0B113CA596001F9C71 /* NSObject+SBJSON.m */; };
 		111ECA17113CA596001F9C71 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ECA0D113CA596001F9C71 /* NSString+SBJSON.m */; };
 		111ECA18113CA596001F9C71 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ECA0F113CA596001F9C71 /* SBJSON.m */; };
@@ -18,6 +17,11 @@
 		111ECA1A113CA596001F9C71 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ECA13113CA596001F9C71 /* SBJsonParser.m */; };
 		111ECA1B113CA596001F9C71 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ECA15113CA596001F9C71 /* SBJsonWriter.m */; };
 		111ECAB2113CADC0001F9C71 /* error-loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 111ECAB1113CADC0001F9C71 /* error-loading.png */; };
+		11ACEFE8113CC24100FC7C7B /* DRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ACEFE6113CC24100FC7C7B /* DRModel.m */; };
+		11D79FF7114045D00019C31C /* TestProjectDRModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 11D79FF6114045D00019C31C /* TestProjectDRModel.xcdatamodel */; };
+		11D79FFC114047370019C31C /* _imageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D79FF9114047370019C31C /* _imageObject.m */; };
+		11D79FFD114047370019C31C /* imageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D79FFB114047370019C31C /* imageObject.m */; };
+		11D7A027114047650019C31C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D7A026114047650019C31C /* CoreData.framework */; };
 		1D3623260D0F684500981E51 /* TestProjectAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TestProjectAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -35,8 +39,6 @@
 		111EC9FC113CA572001F9C71 /* DRGetImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGetImageOperation.m; sourceTree = "<group>"; };
 		111EC9FD113CA572001F9C71 /* DRGetJSONOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGetJSONOperation.h; sourceTree = "<group>"; };
 		111EC9FE113CA572001F9C71 /* DRGetJSONOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGetJSONOperation.m; sourceTree = "<group>"; };
-		111EC9FF113CA572001F9C71 /* DRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRModel.h; sourceTree = "<group>"; };
-		111ECA00113CA572001F9C71 /* DRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRModel.m; sourceTree = "<group>"; };
 		111ECA01113CA572001F9C71 /* DRModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRModelConstants.h; sourceTree = "<group>"; };
 		111ECA02113CA572001F9C71 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		111ECA09113CA596001F9C71 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 		111ECA14113CA596001F9C71 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		111ECA15113CA596001F9C71 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		111ECAB1113CADC0001F9C71 /* error-loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-loading.png"; sourceTree = "<group>"; };
+		11ACEFE6113CC24100FC7C7B /* DRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRModel.m; sourceTree = "<group>"; };
+		11ACEFE7113CC24100FC7C7B /* DRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRModel.h; sourceTree = "<group>"; };
+		11D79FF6114045D00019C31C /* TestProjectDRModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TestProjectDRModel.xcdatamodel; sourceTree = "<group>"; };
+		11D79FF8114047370019C31C /* imageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageObject.h; sourceTree = "<group>"; };
+		11D79FF9114047370019C31C /* _imageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _imageObject.m; sourceTree = "<group>"; };
+		11D79FFA114047370019C31C /* _imageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _imageObject.h; sourceTree = "<group>"; };
+		11D79FFB114047370019C31C /* imageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageObject.m; sourceTree = "<group>"; };
+		11D7A026114047650019C31C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TestProjectAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProjectAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TestProjectAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestProjectAppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				11D7A027114047650019C31C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				111ECA08113CA596001F9C71 /* JSON */,
+				11ACEFE7113CC24100FC7C7B /* DRModel.h */,
+				11ACEFE6113CC24100FC7C7B /* DRModel.m */,
+				11D79FE31140453F0019C31C /* DRModel Objects */,
 				111EC9F8113CA572001F9C71 /* DRModel */,
 				1D3623240D0F684500981E51 /* TestProjectAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TestProjectAppDelegate.m */,
@@ -98,8 +112,6 @@
 		111EC9F8113CA572001F9C71 /* DRModel */ = {
 			isa = PBXGroup;
 			children = (
-				111EC9FF113CA572001F9C71 /* DRModel.h */,
-				111ECA00113CA572001F9C71 /* DRModel.m */,
 				111EC9F9113CA572001F9C71 /* _DRModel.h */,
 				111EC9FA113CA572001F9C71 /* _DRModel.m */,
 				111ECA01113CA572001F9C71 /* DRModelConstants.h */,
@@ -133,6 +145,18 @@
 			name = JSON;
 			path = ../JSON;
 			sourceTree = SOURCE_ROOT;
+		};
+		11D79FE31140453F0019C31C /* DRModel Objects */ = {
+			isa = PBXGroup;
+			children = (
+				11D79FF6114045D00019C31C /* TestProjectDRModel.xcdatamodel */,
+				11D79FF8114047370019C31C /* imageObject.h */,
+				11D79FFB114047370019C31C /* imageObject.m */,
+				11D79FFA114047370019C31C /* _imageObject.h */,
+				11D79FF9114047370019C31C /* _imageObject.m */,
+			);
+			name = "DRModel Objects";
+			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
@@ -177,6 +201,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11D7A026114047650019C31C /* CoreData.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -245,13 +270,16 @@
 				111ECA04113CA572001F9C71 /* _DRModel.m in Sources */,
 				111ECA05113CA572001F9C71 /* DRGetImageOperation.m in Sources */,
 				111ECA06113CA572001F9C71 /* DRGetJSONOperation.m in Sources */,
-				111ECA07113CA572001F9C71 /* DRModel.m in Sources */,
 				111ECA16113CA596001F9C71 /* NSObject+SBJSON.m in Sources */,
 				111ECA17113CA596001F9C71 /* NSString+SBJSON.m in Sources */,
 				111ECA18113CA596001F9C71 /* SBJSON.m in Sources */,
 				111ECA19113CA596001F9C71 /* SBJsonBase.m in Sources */,
 				111ECA1A113CA596001F9C71 /* SBJsonParser.m in Sources */,
 				111ECA1B113CA596001F9C71 /* SBJsonWriter.m in Sources */,
+				11ACEFE8113CC24100FC7C7B /* DRModel.m in Sources */,
+				11D79FF7114045D00019C31C /* TestProjectDRModel.xcdatamodel in Sources */,
+				11D79FFC114047370019C31C /* _imageObject.m in Sources */,
+				11D79FFD114047370019C31C /* imageObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

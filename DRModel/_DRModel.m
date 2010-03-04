@@ -115,7 +115,8 @@
 	NSMutableArray *pool = [queuePools objectForKey:[NSString stringWithFormat:@"%d",identifier]];
 	NSLog(@"Deallocating pool %d (%d queues)",identifier,[pool count]);
 	if (pool != nil) {
-		for (int i=0; i<[pool count]; i++) {
+		int count = [pool count];
+		for (int i=0; i<count; i++) {
 			NSOperationQueue *q = [pool lastObject];
 			[q setSuspended:YES];
 			[q cancelAllOperations];
